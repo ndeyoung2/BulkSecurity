@@ -1,0 +1,10 @@
+{
+  "name": "Bulk Security",
+  "author": "Natalie Ricci",
+  "description": "Bulk updates security roles",
+  "version": "1.0.0",
+  "id": "341a6220-8ca6-4891-8e3e-142cf16580bb",
+  "assemblyFile": "BulkSeciruty.dll",
+  "type": "Tool",
+  "repository": "https://github.com/ndeyoung2/BulkSecurity"
+}
