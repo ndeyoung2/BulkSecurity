@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BulkSecurity",
+    "\\BulkSecurity\\AppCode"
   ],
-  "SelectedNode": "\\BulkSecurity.sln",
+  "SelectedNode": "\\BulkSecurity\\AppCode\\EntityControl.cs",
   "PreviewInSolutionExplorer": false
 }

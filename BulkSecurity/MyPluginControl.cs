@@ -7,16 +7,21 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Windows.Forms; 
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using XrmToolBox.Extensibility;
+using XrmToolBox.Extensibility.Interfaces;
 
 namespace BulkSecurity
 {
     public partial class MyPluginControl : PluginControlBase
     {
         private Settings mySettings;
+
+        //private List<EntityMetadata> entities;
+        //private List<Entity> allRoles;
+        //private Guid currentUserId;
 
         public MyPluginControl()
         {
@@ -25,7 +30,6 @@ namespace BulkSecurity
 
         private void MyPluginControl_Load(object sender, EventArgs e)
         {
-            ShowInfoNotification("This is a notification that can lead to XrmToolBox repository", new Uri("https://github.com/MscrmTools/XrmToolBox"));
 
             // Loads or creates the settings for the plugin
             if (!SettingsManager.Instance.TryLoad(GetType(), out mySettings))
@@ -49,7 +53,7 @@ namespace BulkSecurity
         {
             // The ExecuteMethod method handles connecting to an
             // organization if XrmToolBox is not yet connected
-            ExecuteMethod(GetAccounts);
+            //ExecuteMethod(GetAccounts);
         }
 
         private void GetAccounts()
@@ -103,5 +107,6 @@ namespace BulkSecurity
                 LogInfo("Connection has changed to: {0}", detail.WebApplicationUrl);
             }
         }
+
     }
 }
