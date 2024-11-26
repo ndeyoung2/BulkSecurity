@@ -56,14 +56,14 @@ namespace BulkSecurity
             //ExecuteMethod(GetAccounts);
         }
 
-        private void GetAccounts()
+        private void GetRoles()
         {
             WorkAsync(new WorkAsyncInfo
             {
-                Message = "Getting accounts",
+                Message = "Getting roles",
                 Work = (worker, args) =>
                 {
-                    args.Result = Service.RetrieveMultiple(new QueryExpression("account")
+                    args.Result = Service.RetrieveMultiple(new QueryExpression("roles")
                     {
                         TopCount = 50
                     });
@@ -77,7 +77,7 @@ namespace BulkSecurity
                     var result = args.Result as EntityCollection;
                     if (result != null)
                     {
-                        MessageBox.Show($"Found {result.Entities.Count} accounts");
+                        MessageBox.Show($"Found {result.Entities.Count} roles");
                     }
                 }
             });
